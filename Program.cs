@@ -57,3 +57,13 @@ string ReadInput(string msg)
     Console.Write(msg);
     return Console.ReadLine();
 }
+//  Функция 3: вывод массива в терминал
+void PrintArray(string[] array)
+{
+    Console.Write("[ ");
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write($"“{array[i]}”, ");
+    }
+    Console.Write("] ");
+}
