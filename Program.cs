@@ -1,4 +1,5 @@
-﻿string[] array = new string[] {};
+﻿Commands();
+string[] array = new string[] {};
 
 string fromUser = ReadInput("Введите команду: ");
 switch (fromUser)
@@ -39,3 +40,30 @@ for (int i = 0; i <= array.Length - 1; i++)
 PrintArray(array);
 Console.Write("→ ");
 PrintArray(newArray);
+
+// Функция 1: Вывод команд для работы
+void Commands()
+{
+    Console.WriteLine();
+    Console.WriteLine("СПИСОК КОМАНД:");
+    Console.WriteLine("1 – использовать массив: [“Hello”, “2”, “world”, “:-)”]");
+    Console.WriteLine("2 – использовать массив: [“1234”, “1567”, “-2”, “computer science”]");
+    Console.WriteLine("3 – использовать массив: [“Russia”, “Denmark”, “Kazan”]");
+    Console.WriteLine();
+}
+// Функция 2: функция ввода
+string ReadInput(string msg)
+{
+    Console.Write(msg);
+    return Console.ReadLine();
+}
+//  Функция 3: вывод массива в терминал
+void PrintArray(string[] array)
+{
+    Console.Write("[ ");
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write($"“{array[i]}”, ");
+    }
+    Console.Write("] ");
+}
